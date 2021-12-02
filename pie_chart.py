@@ -7,6 +7,7 @@ plt.style.use('_mpl-gallery-nogrid')
 data_frame = main()
 # make data
 x = data_frame["colonne_1"]
+print(x)
 colors = plt.get_cmap('Greens')(np.linspace(0.2, 0.7, len(x)))
 
 # plot
