@@ -2,16 +2,18 @@ import os, pandas, pathlib
 from pandas.core.frame import DataFrame
 
 
-def read_data_file(path: str) -> DataFrame:
+def read_data_file(path: str, sheet_name: str="") -> DataFrame:
     if not os.path.exists(path):
         return None
     data_file = open(path, 'rb')
     if ".csv" in path:
         data = pandas.read_csv(data_file)
     elif ".xlsx" in path:
-        data = pandas.read_excel(data_file, sheet_name='excel_file')
+        data = pandas.read_excel(data_file, sheet_name=sheet_name)
     elif ".json" in path:
         data = pandas.read_json(data_file)
+    elif ".xml" in path:
+        data = pandas.read_xml(data_file)
     else:
         return None
     print(data)

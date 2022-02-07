@@ -23,6 +23,7 @@ ipython-genutils==0.2.0
 jedi==0.18.1
 Jinja2==3.0.3
 jsonschema==4.2.1
+jupyterlab==3.2.4
 jupyter-client==7.0.6
 jupyter-contrib-core==0.3.3
 jupyter-contrib-nbextensions==0.5.1
@@ -81,3 +82,4 @@ urllib3==1.26.7
 wcwidth==0.2.5
 webencodings==0.5.1
 zipp==3.6.0
+openpyxl
